@@ -12,36 +12,35 @@ class MainWindow(QMainWindow):
         
         self.ui = loader.load('6.ui', None)
         ta = QFont()
-        self.lineedit.setFont(QFont('Arial', 20))
+        self.setFont(QFont('Arial', 20))
         tb = QLineEdit()
         tb.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         self.ui.textbox.setText('please enter your guess number:')
         self.ui.setWindowTitle('guesses GAME :')
-        self.ui.btn_check.clicked.connect(self.checknum)
-        self.ui.btn_reset.clicked.connect(self.resetnum)
+        self.ui.btn_check.clicked.connect(self.ckeck)
+        self.ui.btn_reset.clicked.connect(self.reset)
+        self.ui.btn_new.clicked.connect(self.Newgame)
 
         self.ui.show()
 
-    def guessnumber(self, r):
-        self.ui.textbox.setText(self.ui.textbox.text()+ r)
-        r = random.randint(0,500)
+    def Newgame(self):
+        self.random = random.randint (0, 500)
+        
+    def ckeck(self):
+        my_entry = self.ui.lineEdit.text()
+        if int(my_entry) == self.random:
+             msgBox = QMessageBox()
+             msgBox.setText('you are winer')
+             msgBox.exec()
+           
 
-
-       
-    def ckecknum(self):
-        if self.guessnumber == 'r':
-            msgBox = QMessageBox()
-            msgBox.setText('you are winer')
-            msgBox.exec()
-            self.sign = 'check'
-
-        elif self.guessnumber > 'r':
+        elif int(my_entry) > self.random:
             self.ui.textbox.setText('plz guess  lower number')
 
-        elif self.guessnumber < 'r':
+        elif int(my_entry) > self.random:
             self.ui.textbox.setText('plz guess uper number')
 
-    def resetnum(self):
+    def reset(self):
         self.ui.textbox.setText('')
 
 

@@ -14,8 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(170, 255, 127);
-background-color: rgb(170, 170, 127);</string>
+   <string notr="true">background-color: rgb(190, 200, 158);
+</string>
   </property>
   <property name="iconSize">
    <size>
@@ -43,7 +43,8 @@ background-color: rgb(170, 170, 127);</string>
      <string>check</string>
     </property>
     <property name="icon">
-     <iconset theme="20"/>
+     <iconset theme="20">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -80,6 +81,22 @@ background-color: rgb(159, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_new">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>250</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(145, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Newgame</string>
     </property>
    </widget>
   </widget>
