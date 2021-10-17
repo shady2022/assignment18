@@ -1,7 +1,7 @@
-:open_file_folder: # assignment18
+:open_file_folder:  #assignment18
 :small_red_triangle_down:
 
-#:one:Gueses the Number 
+:one:Gueses the Number 
 
 have fun with this game..
 
